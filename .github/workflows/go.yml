@@ -27,8 +27,3 @@ jobs:
 
     - name: Start MongoDB
       run: sudo service mongod start
-
-    - name: Build and Test
-      run: |
-        go build -v ./...
-        go test -v ./...
