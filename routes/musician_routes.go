@@ -6,5 +6,6 @@ import (
 )
 
 func SetupMusicianRoutes(router *gin.Engine) {
-	router.POST("/api/musicians", controllers.CreateMusician)
+	router.POST("/api/musicians", controllers.CreateOrUpdateMusician)
+	router.GET("/api/albums/:album_id/musicians", controllers.GetMusiciansForAlbumSortedByName)
 }
